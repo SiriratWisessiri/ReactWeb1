@@ -12,7 +12,7 @@ function Navbar() {
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
-    // Function to shown button when screen size is bigger than 960
+    ////Function to shown button when screen size is bigger than 960
     const showButtton = () => {
         if (window.innerWidth <= 960) {
             setButton(false);
@@ -21,14 +21,17 @@ function Navbar() {
         }
     };
 
-
+    //Fix the sign up button to render only one time, notshowing up once resize and refresh
+    useEffect(() => {
+        showButtton();
+    }, []);
     window.addEventListener('resize', showButtton);
     ////
   return (
     <>
         <nav className='navbar'>
             <div className='navbar-container'>
-                <Link to='/' className='navbar-logo'>
+                <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                     TRVL 
                     <i class="fa-solid fa-sailboat"></i>
                 </Link>
