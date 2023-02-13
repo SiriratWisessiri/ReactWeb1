@@ -14,10 +14,10 @@ function App() {
         <Navbar/>
         <Routes>
           {/* <Route path='/' exact component={Home}/> */}
-          <Route exact path="/" element={<Home />}/>
-          <Route exact path="/services" element={<Services/>}/>
-          <Route exact path="/products" element={<Products />}/>
-          <Route exact path="/sign-up" element={<SignUp/>}/>
+          <Route exact path="/ReactWeb1" element={<Home />}/>
+          <Route exact path="/ReactWeb1/services" element={<Services/>}/>
+          <Route exact path="/ReactWeb1/products" element={<Products />}/>
+          <Route exact path="/ReactWeb1/sign-up" element={<SignUp/>}/>
         </Routes>
       </div>
     </Router>
